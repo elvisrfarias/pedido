@@ -19,8 +19,6 @@ const Home = () => {
 	}, []);
 
 	const handleClickYes = useCallback(() => {
-		const audio = document.getElementById('yes-audio') as HTMLAudioElement;
-		audio.play();
 		setIsModalOpen(true);
 	}, []);
 
@@ -48,8 +46,7 @@ const Home = () => {
 				]}
 			>
 				<div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '32px' }}>
-					<div className="tenor-gif-embed" data-postid="8807297" data-share-method="host" data-aspect-ratio="1.585" data-width="100%" />
-					<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+					<iframe src="https://giphy.com/embed/1QamCnKK22AsdnyOYC" width="280" height="280" frameBorder="0" className="giphy-embed" allowFullScreen></iframe>
 					<Typography.Title level={4}>Partiu falar com os pastores! 🙏🏽</Typography.Title>
 				</div>
 			</Modal>
@@ -59,7 +56,7 @@ const Home = () => {
 	return (
 		<>
 			<header>
-				<Typography.Title>Quer orar comigo? 💗</Typography.Title>
+				<Typography.Title>Mel, quer orar comigo? 💗</Typography.Title>
 			</header>
 
 			<main id="conteiner">
@@ -86,8 +83,6 @@ const Home = () => {
 
 				{renderModal()}
 			</main>
-
-			<audio id="yes-audio" src="./romantica.mp3" />
 		</>
 	);
 }
